@@ -2,14 +2,8 @@
 import os
 os.system("cls")
 
-n = int(input('Введите любое целое число: '))
-if n % 15 == 0:
-    print('Число кратно 15')
-if n % 10 == 0:
-    print('Число кратно 10')
-if n % 5 == 0:
-    print('Число кратно 5')
-else:
-    print('Число не кратно 5,10 или 15')
+n = abs(int(input('Введите любое целое число: ')))
+
+print(bool(((n % 5 == 0 and n % 10 == 0) or n % 15 == 0) and n % 30 != 0))
 
 print('\n')
