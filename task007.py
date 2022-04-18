@@ -7,7 +7,7 @@ x = [True, False]
 y = [True, False]
 z = [True, False]
 print('\tX\tY\tZ\t¬(X ⋁ Y ⋁ Z)\t¬X ⋀ ¬Y ⋀ ¬Z\t¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z')
-print('__________________________________________________________________________________________________')
+print('_'*100)
 index = 0
 while (index <= 1):
     count = 0
