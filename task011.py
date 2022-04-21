@@ -4,10 +4,7 @@ import os
 os.system("cls")
 
 n = int(input('Введите количество элементов последовательности: '))
-list = []
-for i in range(n):
-    if i % 2 == 0:
-        list.append(3**i)
-    else:
-        list.append(-3**i)
+
+list = [((-3)**i) for i in range(n)]
+
 print(list, '\n')
