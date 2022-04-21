@@ -6,11 +6,9 @@ import os
 os.system("cls")
 
 
-def get_dict(n):
-    return {x: 3 * x + 1 for x in range(1, n+1)}
-
-
 n = int(input('Задайте количество элементов последовательности: '))
 
+dictionary = {x: 3 * x + 1 for x in range(1, n+1)}
+
 print(n)
-print(get_dict(n))
+print(dictionary)
