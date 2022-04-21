@@ -5,10 +5,17 @@
 import os
 os.system("cls")
 
-
+# первое решение
 n = int(input('Задайте количество элементов последовательности: '))
 
 dictionary = {x: 3 * x + 1 for x in range(1, n+1)}
 
 print(n)
 print(dictionary)
+
+# второе решение
+slovar = {}
+n = int(input('Задайте количество элементов последовательности: '))
+for i in range(1, n+1):
+    slovar[i] = 3*i+1
+print(slovar)
