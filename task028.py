@@ -1,16 +1,28 @@
-# Найти НОК двух чисел
+# Найти корни квадратного уравнения Ax² + Bx + C = 0
+# -Математикой
+# -Используя дополнительные библиотеки*
 
-import os
+from math import *
 from random import *
+import os
 os.system("cls")
 
-a = randint(10, 100)
-b = randint(10, 100)
+a = uniform(1, 100)
+b = uniform(1, 100)
+c = uniform(1, 100)
 print('a = ', a)
 print('b = ', b)
+print('c = ', c)
 
-for i in range(a*b, 1, -1):
-    if i % a == 0 and i % b == 0:
-        nok = i
+discr = b ** 2 - 4 * a * c
+print("Дискриминант D = %.2f" % discr)
 
-print('НОК = ', nok, '\n')
+if discr > 0:
+    x1 = (-b + sqrt(discr)) / (2 * a)
+    x2 = (-b - sqrt(discr)) / (2 * a)
+    print("x1 = %.2f \nx2 = %.2f" % (x1, x2))
+elif discr == 0:
+    x = -b / (2 * a)
+    print("x = %.2f" % x)
+else:
+    print("Корней нет")
