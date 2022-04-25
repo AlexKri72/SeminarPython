@@ -9,4 +9,5 @@ os.system("cls")
 list = [randint(1, 21) for i in range(8)]
 print(list, '\n')
 for i in range(int(len(list)/2)):
-    print(list[i] + list[len(list)-1-i], end='      ')
+    print(list[i] + list[len(list)-1-i], end=' '*6,)
+print('\n')
