@@ -3,9 +3,8 @@ import os
 from random import *
 os.system("cls")
 
-list = [randint(1, 21) for i in range(7)]
+n = randint(7, 13)
+list = [randint(1, 21) for i in range(n)]
 print(list, '\n')
-sum = 0
-for i in range(0, len(list), 2):
-    sum += list[i]
-print('Сумма элементов на нечетных позициях равна ', sum, '\n')
+
+print('Сумма элементов на нечетных позициях равна ', sum(list[1::2]), '\n')
