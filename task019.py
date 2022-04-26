@@ -4,4 +4,4 @@ import os
 from time import time
 os.system("cls")
 
-print(time() % 10/10, '\n')
+print(time() % 1, '\n')
