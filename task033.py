@@ -35,7 +35,8 @@ polynom1 = get_polynomial(k, ratios)
 print(polynom1)
 
 with open('task033.txt', 'w') as data:
-    data.write(polynom1)
+    data.writelines(polynom1)
+    data.writelines('\n')
 
 
 # Второй многочлен для следующей задачи:
@@ -46,5 +47,5 @@ ratios = get_ratios(k)
 polynom2 = get_polynomial(k, ratios)
 print(polynom2)
 
-with open('task033.txt', 'w') as data:
+with open('task033.txt', 'a') as data:
     data.write(polynom2)
