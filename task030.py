@@ -6,7 +6,7 @@ from math import pi
 from random import*
 os.system("cls")
 
-a = randint(1, 10)
-print('Точность вывода = ', a)
+d = randint(1, 10)
+print('Точность вывода = ', d)
 
-print('Пи = ', round(pi, a), '\n')
+print('Пи = ', round(pi, d), '\n')
