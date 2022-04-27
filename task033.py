@@ -34,8 +34,8 @@ ratios = get_ratios(k)
 polynom1 = get_polynomial(k, ratios)
 print(polynom1)
 
-# перезаписываем результат в файл, предыдущая запись обнуляется
-with open('task033.txt', 'w') as data:
+# перезаписываем результат в файл1, предыдущая запись обнуляется
+with open('task033_1.txt', 'w') as data:
     data.writelines(polynom1)
     data.writelines('\n')
 
@@ -48,5 +48,5 @@ ratios = get_ratios(k)
 polynom2 = get_polynomial(k, ratios)
 print(polynom2)
 
-with open('task033.txt', 'a') as data:  # добавляем запись в файл
+with open('task033_2.txt', 'w') as data:  # добавляем запись в файл
     data.write(polynom2)
