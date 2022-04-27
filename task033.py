@@ -8,18 +8,18 @@ import os
 os.system("cls")
 
 
-k = randint(2, 7)
+k = randint(2, 7)  # случайным образом выбираем степень
 print('k = ', k)
 
 
-def get_ratios(k):
+def get_ratios(k):  # заполняем массив ratios случайными числами, чтобы первый элемент был не нулевой
     ratios = [randint(0, 10) for i in range(k + 1)]
     while ratios[0] == 0:
         ratios[0] = randint(1, 10)
     return ratios
 
 
-def get_polynomial(k, ratios):
+def get_polynomial(k, ratios):  # вычисляем полином, передаем степень и массив коэффициентов
     var = ['*x^']*(k-1) + ['*x']
     polynomial = [[a, b, c] for a, b, c in itertools.zip_longest(
         ratios, var, range(k, 1, -1), fillvalue='') if a != 0]
@@ -34,6 +34,7 @@ ratios = get_ratios(k)
 polynom1 = get_polynomial(k, ratios)
 print(polynom1)
 
+# перезаписываем результат в файл, предыдущая запись обнуляется
 with open('task033.txt', 'w') as data:
     data.writelines(polynom1)
     data.writelines('\n')
@@ -47,5 +48,5 @@ ratios = get_ratios(k)
 polynom2 = get_polynomial(k, ratios)
 print(polynom2)
 
-with open('task033.txt', 'a') as data:
+with open('task033.txt', 'a') as data:  # добавляем запись в файл
     data.write(polynom2)
