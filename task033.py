@@ -2,7 +2,7 @@
 # Сформировать случайным образом список коэффициентов (значения от 0 до 100)
 # многочлена и записать в файл многочлен степени k.
 # Пример: k=2 => 2x² + 4x + 5 = 0 или x² + 5 = 0 или 10x² = 0
-import itertools
+from itertools import *
 from random import randint
 import os
 os.system("cls")
@@ -13,19 +13,19 @@ print('k = ', k)
 
 
 def get_ratios(k):  # заполняем массив ratios случайными числами, чтобы первый элемент был не нулевой
-    ratios = [randint(0, 10) for i in range(k + 1)]
+    ratios = [randint(1, 9) for i in range(k + 1)]
     while ratios[0] == 0:
-        ratios[0] = randint(1, 10)
+        ratios[0] = randint(1, 9)
     return ratios
 
 
 def get_polynomial(k, ratios):  # вычисляем полином, передаем степень и массив коэффициентов
     var = ['*x^']*(k-1) + ['*x']
-    polynomial = [[a, b, c] for a, b, c in itertools.zip_longest(
+    polynomial = [[a, b, c] for a, b, c in zip_longest(
         ratios, var, range(k, 1, -1), fillvalue='') if a != 0]
     for x in polynomial:
         x.append(' + ')
-    polynomial = list(itertools.chain(*polynomial))
+    polynomial = list(chain(*polynomial))
     polynomial[-1] = ' = 0'
     return "".join(map(str, polynomial)).replace(' 1*x', ' x')
 
