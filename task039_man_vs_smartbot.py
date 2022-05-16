@@ -52,6 +52,16 @@ def introduce_players():
     return [player1, player2]
 
 
+# def get_rules(players):
+#     n = int(input('Сколько конфет будем разыгрывать? '))
+#     m = int(input('Сколько максимально будем брать конфет за один ход? '))
+#     first = input(
+#         f'{players[0]}, если хотите ходить первым, нажмите 1, если нет, любую другую клавишу ')
+#     if first != '1':
+#         first = 0
+#     return [n, m, int(first)]
+
+
 def get_rules(players):
     n = int(input('Сколько конфет будем разыгрывать? '))
     m = int(input('Сколько максимально будем брать конфет за один ход? '))
@@ -69,6 +79,8 @@ def play_game(rules, players, messages):
     while rules[0] > 0:
         if not count % 2:
             move = rules[0] % (rules[1] + 1)
+            if move == 0:
+                move = rules[1]
             print(f'Я забираю {move} конфет{candy(move)}')
         else:
             print(f'{players[0]}, {choice(messages)}')
