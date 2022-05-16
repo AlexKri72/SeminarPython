@@ -5,6 +5,6 @@ os.system("cls")
 
 n = int(input('Введите количество элементов последовательности: '))
 
-list = [((-3)**i) for i in range(n)]
+list = [(-3)**i for i in range(n)]
 
 print(list, '\n')
