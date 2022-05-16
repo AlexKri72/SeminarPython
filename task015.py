@@ -8,7 +8,5 @@ os.system("cls")
 
 n = random.randint(8, 16)
 
-num = list(accumulate([x for x in range(1, n + 1)], operator.mul))
-
 print(' Задать последовательность из', n, 'элементов\n',
-      'Последовательность:', *num, '\n')
+      'Последовательность:', *list(accumulate([x for x in range(1, n + 1)], operator.mul)), '\n')
