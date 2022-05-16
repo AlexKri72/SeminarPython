@@ -1,15 +1,15 @@
 # Написать программу получающую набор произведений чисел от 1 до N.
 # Пример: пусть N = 4, тогда [ 1, 2, 6, 24 ]
+from audioop import mul
 import os
+from itertools import accumulate
+import operator
 import random
 os.system("cls")
 
 n = random.randint(6, 16)
-print(n)
 
-list = [1]
+num = list(accumulate([x for x in range(1, n + 1)], operator.mul))
 
-for i in range(2, n+1):
-    list.append(i * list[i-2])
-
-print(list, '\n')
+print(' Задать последовательность из', n, 'элементов\n',
+      'Последовательность:', *num, '\n')
