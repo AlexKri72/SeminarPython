@@ -7,7 +7,5 @@ os.system("cls")
 a = random.uniform(1, 1001)
 print('Задано число:', a)
 
-a = str(a).replace('.', '')     # переводим в строковый тип, убираем точку
-
-summa = sum(map(int, a))        # переводим в числовой тип, считаем сумму
+summa = sum(map(int, str(a).replace('.', '')))
 print('Сумма цифр данного числа равна:', summa, '\n')
