@@ -5,8 +5,6 @@
 import os
 os.system("cls")
 
-n = int(input('Задайте количество элементов последовательности: '))
 
-dictionary = {x: 3 * x + 1 for x in range(1, n+1)}
-
-print('\nСловарь:', dictionary, '\n')
+print('\nСловарь:', {x: 3 * x + 1 for x in range(1,
+      int(input('Задайте количество элементов последовательности: '))+1)}, '\n')
