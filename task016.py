@@ -5,10 +5,7 @@ import random
 os.system("cls")
 
 n = random.randint(6, 16)
-print(n)
 
-massive = []
-
-for i in range(1, n+1):
-    massive.append(1+(1/i)**i)
-print(f'{sum(massive):.2f}')
+num = [1+(1/i)**i for i in range(1, n+1)]
+print('Задана последовательность из ', n,
+      'чисел:\n', *num, '\nСумма чисел = ', round(sum(num), 2), '\n')
